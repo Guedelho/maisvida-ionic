@@ -1,0 +1,58 @@
+<!--
+  Generated template for the MedicosFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Médico</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngIf="medico">
+    <ion-item>
+      <ion-label>Id</ion-label>
+      <ion-input [(ngModel)]="medico.id" type="number" ngDefaultControl required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Especialidade</ion-label>
+      <ion-input [(ngModel)]="medico.especialidade" type="text" ngDefaultControl required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input [(ngModel)]="medico.primeiroNome" type="text" ngDefaultControl required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sobre Nome</ion-label>
+      <ion-input [(ngModel)]="medico.ultimoNome" type="text" ngDefaultControl required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="medico.email" type="email" ngDefaultControl required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ativo</ion-label>
+      <ion-checkbox [(ngModel)]="medico.ativo" ngDefaultControl required></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ocupado</ion-label>
+      <ion-checkbox [(ngModel)]="medico.ocupado" ngDefaultControl required></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cidade</ion-label>
+      <ion-input [(ngModel)]="medico.cidade" type="text" ngDefaultControl required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Estado</ion-label>
+      <ion-input [(ngModel)]="medico.estado" type="text" ngDefaultControl requiredrequired></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button full (click)="salvarMedico()">Salvar</button>
+  </div>
+</ion-content>
